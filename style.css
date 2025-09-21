@@ -2,9 +2,9 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to right, #f7f0f7, #d9b3ff);
-  text-align: center;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 header {
@@ -15,6 +15,7 @@ header {
 
 h1 {
   margin: 0;
+  font-size: 1.8em;
 }
 
 nav {
@@ -35,6 +36,102 @@ nav {
 
 .tab-btn:hover {
   background-color: #e0c0ff;
+}
+
+main {
+  padding: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #6a0dad;
+  background-color: white;
+  color: #6a0dad;
+  font-weight: bold;
+  transition: 0.2s;
+  min-width: 120px;
+}
+
+button:hover {
+  background-color: #d9b3ff;
+  color: #fff;
+}
+
+.message {
+  margin-top: 15px;
+  font-weight: bold;
+  color: green;
+}
+
+#results {
+  font-size: 18px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.result-bar {
+  background-color: #ddd;
+  border-radius: 20px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.result-fill {
+  background-color: #6a0dad;
+  height: 25px;
+  line-height: 25px;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #6a0dad;
+  color: white;
+  padding: 15px 10px;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #ffd1ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Tabs */
+.tab-content {
+  animation: fadeIn 0.5s;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  button {
+    min-width: 100px;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  #results {
+    font-size: 16px;
+  }
+}  background-color: #e0c0ff;
 }
 
 main {
