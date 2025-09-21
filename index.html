@@ -7,18 +7,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Vote for Your Favorite in Nankhtai Vlogs!</h1>
-  
-  <div id="candidates">
-    <button onclick="vote('Bhavya')">Bhavya</button>
-    <button onclick="vote('Jovita')">Jovita</button>
-    <button onclick="vote('Lavesh')">Lavesh</button>
-    <button onclick="vote('Mansi')">Mansi</button>
-    <button onclick="vote('Tanaya')">Tanaya</button>
-  </div>
-  
-  <h2>Results:</h2>
-  <div id="results"></div>
+  <header>
+    <h1>Nankhtai Vlogs Fan Voting</h1>
+    <nav>
+      <button class="tab-btn" onclick="showTab('vote')">Vote</button>
+      <button class="tab-btn" onclick="showTab('results')">Results</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Vote Tab -->
+    <div id="vote-tab" class="tab-content">
+      <h2>Vote for Your Favorite!</h2>
+      <div id="candidates">
+        <button onclick="vote('Bhavya')">Bhavya</button>
+        <button onclick="vote('Jovita')">Jovita</button>
+        <button onclick="vote('Lavesh')">Lavesh</button>
+        <button onclick="vote('Mansi')">Mansi</button>
+        <button onclick="vote('Tanaya')">Tanaya</button>
+      </div>
+      <p id="vote-msg" class="message"></p>
+    </div>
+
+    <!-- Results Tab -->
+    <div id="results-tab" class="tab-content" style="display:none;">
+      <h2>Current Results</h2>
+      <div id="results"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Follow us on Instagram: <a href="https://www.instagram.com/nankhtai.vlogs/" target="_blank">@nankhtai.vlogs</a></p>
+    <p>Website made by Lavesh</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
