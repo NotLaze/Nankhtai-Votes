@@ -40,6 +40,28 @@ function showResults() {
 
   candidates.forEach(candidate => {
     const percent = totalVotes === 0 ? 0 : ((votes[candidate]/totalVotes)*100).toFixed(1);
+    resultsDiv.innerHTML += `
+      <div>${candidate}: ${votes[candidate]} votes (${percent}%)</div>
+      <div class="result-bar">
+        <div class="result-fill" style="width: ${percent}%">${percent}%</div>
+      </div>
+    `;
+  });
+
+  // Most and least votes
+  const maxVotes = Math.max(...Object.values(votes));
+  const minVotes = Math.min(...Object.values(votes));
+  resultsDiv.innerHTML += `<br><b>Most Votes:</b> ${candidates.filter(c => votes[c] === maxVotes).join(', ')}<br>`;
+  resultsDiv.innerHTML += `<b>Least Votes:</b> ${candidates.filter(c => votes[c] === minVotes).join(', ')}`;
+}
+
+// Show results initially
+showResults();  const totalVotes = Object.values(votes).reduce((a, b) => a + b, 0);
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = '';
+
+  candidates.forEach(candidate => {
+    const percent = totalVotes === 0 ? 0 : ((votes[candidate]/totalVotes)*100).toFixed(1);
     resultsDiv.innerHTML += `${candidate}: ${votes[candidate]} votes (${percent}%)<br>`;
   });
 
